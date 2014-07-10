@@ -1,0 +1,19 @@
+<h1>Poco</h1>
+
+<div>
+  <form action="/" method="get">
+    <label for="user_id">User ID:</label>
+    <input type="text" name="user_id" id="user_id">
+    <input type="submit">
+  </form>
+</div>
+
+<div class="posts">
+  <ul>
+    <% @posts.each do |post| %>
+
+      <li><%= post.title %> - <%= post.user.name %></li>
+
+    <% end %>
+  </ul>
+</div>
